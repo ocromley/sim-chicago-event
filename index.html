@@ -330,14 +330,12 @@
             gap: 0.5rem;
         }
         .sponsor-logo {
-            filter: grayscale(100%);
-            opacity: 0.7;
+            opacity: 0.9;
             transition: all 0.3s ease;
             max-height: 60px;
             width: auto;
         }
         .sponsor-logo:hover {
-            filter: grayscale(0%);
             opacity: 1;
             transform: scale(1.1);
         }
@@ -605,6 +603,8 @@
     </style>
     <base target="_blank">
 <base target="_blank">
+<base target="_blank">
+<base target="_blank">
 </head>
 <body>
     <!-- Sticky Header with SIM Logo -->
@@ -623,11 +623,15 @@
             <button onclick="showPage('survey')" id="btn-survey">Survey</button>
             <button onclick="showPage('connect')" id="btn-connect">Connect</button>
             <button onclick="showPage('sim')" id="btn-sim">About SIM</button>
+            <button onclick="showPage('gallery')" id="btn-gallery">Photo Gallery</button>
         </nav>
     </header>
 
     <!-- PAGE 1: HOME / HERO -->
     <div class="page active" id="page-home">
+        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: flex-end; background: transparent; position: absolute; top: 80px; right: 0; z-index: 100;">
+            <button onclick="showPage('speaker')">Next → Speaker</button>
+        </div>
         <div class="hero-box">
             <div class="hero-content">
                 <div class="hero-badge">Invitation Only</div>
@@ -691,13 +695,14 @@
                 </li>
             </ul>
         </div>
-        <div class="page-arrows">
-            <button onclick="showPage('speaker')">Next → Speaker</button>
-        </div>
     </div>
 
     <!-- PAGE 2: SPEAKER -->
     <div class="page" id="page-speaker">
+        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
+            <button onclick="showPage('home')">← Home</button>
+            <button onclick="showPage('sponsors')">Next → Sponsors</button>
+        </div>
         <div class="box">
             <div class="box-header">
                 <h2>Featured Speaker</h2>
@@ -710,32 +715,44 @@
                 <div class="speaker-info">
                     <h3>Lisa Davis</h3>
                     <span class="title">Fortune 500 Executive & Bestselling Author</span>
-                    <p>Lisa Davis is a visionary force in digital transformation and leadership in the AI era, with over 25 years of experience driving innovation across government, academia, high tech, and healthcare. A former Fortune 100 tech executive who has led large-scale modernization efforts across global enterprises, she has built a career turning technology into tangible business growth while redefining inclusive leadership—not as a cultural play, but as a competitive advantage that accelerates growth and fuels business success. Now, in her next chapter, Lisa is focused on shaping the next generation of leaders in the age of AI. She brings a uniquely holistic approach to transformation, understanding that progress isn’t just powered by technology—it’s enabled by people, culture, and process. As an advisor, board member, and author of #1 Amazon bestselling book The Only Woman in the Room, she is a fierce advocate for elevating women and diverse talent in STEM—and for rebuilding the systems that have kept them out. In sharing her own experiences and working alongside leaders and organizations ready to meet the moment, Lisa is helping to shape a future where equity and excellence power one another. She’s not celebrating having been the only woman in the room—she’s building a future where no one else has to be. The Only Woman in the Room: How to Win in a Workplace (Still!) Built for Men now available on Amazon.</p>
+                    <p>Lisa Davis is a visionary force in digital transformation and leadership in the AI era, with over 25 years of experience driving innovation across government, academia, high tech, and healthcare.</p>
+
+                    <p>A former Fortune 100 tech executive who has led large-scale modernization efforts across global enterprises, she has built a career turning technology into tangible business growth while redefining inclusive leadership, not as a cultural play, but as a competitive advantage that accelerates growth and fuels business success.</p>
+
+                    <p>Now, in her next chapter, Lisa is focused on shaping the next generation of leaders in the age of AI. She brings a uniquely holistic approach to transformation, understanding that progress isn't just powered by technology, it's enabled by people, culture, and process.</p>
+
+                    <p>As an advisor, board member, and author of #1 Amazon bestselling book <strong style="color: var(--navy);">The Only Woman in the Room</strong>, she is a fierce advocate for elevating women and diverse talent in STEM and for rebuilding the systems that have kept them out.</p>
+
+                    <p>In sharing her own experiences and working alongside leaders and organizations ready to meet the moment, Lisa is helping to shape a future where equity and excellence power one another. She's not celebrating having been the only woman in the room, she's building a future where no one else has to be. <strong style="color: var(--navy);">The Only Woman in the Room: How to Win in a Workplace (Still!) Built for Men</strong> now available on <a href="https://www.amazon.com/Only-Woman-Room-Workplace-Built/dp/B0DKLHHMZ4" target="_blank" style="color: #40E0D0; text-decoration: underline; font-weight: 600;">Amazon</a>.</p>
+
                     <p>Her journey from early career challenges to executive leadership provides invaluable insights for women navigating the tech industry. Lisa's authentic storytelling and practical wisdom make her one of the most sought-after speakers on leadership and diversity in technology.</p>
 
-                    <div class="book-highlight">
-                        <strong>Bestselling Book</strong>
-                        <p>Lisa is the author of <em>"The Only Woman in the Room: How to Thrive in Workplaces Built for Men"</em> — a candid, empowering guide that draws from her personal experiences to help women succeed in male-dominated industries. The book has become essential reading for women in tech and business leadership.</p>
+                    <div class="book-highlight" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 2.5rem; border-radius: 12px; margin-top: 1.5rem; border-left: 4px solid var(--gold); line-height: 1.8;">
+                        <strong style="color: var(--gold); font-size: 1.2rem; display: block; margin-bottom: 1.5rem;">Bestselling Book</strong>
+                        <p style="color: #f0f0f0; font-size: 1.05rem; margin-bottom: 1.2rem;">Lisa is the author of <strong style="color: #ffffff;">The Only Woman in the Room: How to Thrive in Workplaces Built for Men</strong>. It is a candid, empowering guide that draws from her personal experiences to help women succeed in male-dominated industries. The book has become essential reading for women in tech and business leadership.</p>
+                        <p style="color: #f0f0f0; font-size: 1.05rem; margin-bottom: 1.2rem;">It invites readers into the real story of what it takes to lead as a woman when the rules weren't written with you in mind, but you're determined to win anyway.</p>
+                        <p style="color: #f0f0f0; font-size: 1.05rem; margin-bottom: 1.2rem;">She's not celebrating having been the only woman in the room, she's building a future where no one else has to be.</p>
+                        <p style="color: #f0f0f0; font-size: 1.05rem; margin-bottom: 0;"><a href="https://www.daviscoreadvisory.com/about" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">More about Lisa...</a></p>
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
                 <h3 style="font-family: Playfair Display, serif; margin-bottom: 1rem;">Featured Book</h3>
-                <img src="book.png" alt="The Only Woman in the Room Book Cover" style="width: 100%; max-width: 280px; height: auto; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.2); border: 2px solid var(--gold); margin: 1.5rem auto; display: block;">
-                <p style="color: var(--gray); max-width: 500px; margin: 0 auto;">
+                <img src="1775853646404.jpg" alt="The Only Woman in the Room Book Cover" style="width: 100%; max-width: 600px; height: auto; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.2); margin: 1.5rem auto; display: block;">
+                <p style="color: var(--gray); max-width: 500px; margin: 0 auto; line-height: 1.8;">
                     Lisa's bestselling book offers candid advice and powerful strategies for women navigating male-dominated workplaces. Drawing from her own experiences in Fortune 500 companies, she provides practical guidance for building confidence, claiming your seat at the table, and thriving as a woman in leadership.
                 </p>
             </div>
-        </div>
-        <div class="page-arrows">
-            <button onclick="showPage('home')">← Home</button>
-            <button onclick="showPage('sponsors')">Next → Sponsors</button>
         </div>
     </div>
 
     <!-- PAGE 3: SPONSORS -->
     <div class="page" id="page-sponsors">
+        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
+            <button onclick="showPage('speaker')">← Speaker</button>
+            <button onclick="showPage('survey')">Next → Survey</button>
+        </div>
         <div class="box">
             <div class="box-header">
                 <h2>Our Sponsors</h2>
@@ -761,41 +778,41 @@
                 <a href="mailto:info@sim-chicago.org" class="btn btn-primary">Become a Sponsor</a>
             </div>
         </div>
-        <div class="page-arrows">
-            <button onclick="showPage('speaker')">← Speaker</button>
-            <button onclick="showPage('survey')">Next → Survey</button>
-        </div>
     </div>
     <!-- PAGE 4: SURVEY -->
     <div class="page" id="page-survey">
+        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
+            <button onclick="showPage('sponsors')">← Sponsors</button>
+            <button onclick="showPage('connect')">Next → Connect</button>
+        </div>
         <div class="box">
             <div class="box-header">
                 <h2>Event Feedback</h2>
                 <div class="divider"></div>
-                <p>Your feedback helps us create better experiences. Please take a moment to share your thoughts.</p>
+                <p>Your feedback helps us create better experiences. All responses are anonymous.</p>
             </div>
 
             <div class="survey-container">
                 <div class="survey-question">
                     <h4>1. How would you rate the overall event experience?</h4>
                     <div class="rating-scale">
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">1</div>
                             <span class="rating-label">Poor</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">2</div>
                             <span class="rating-label">Fair</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">3</div>
                             <span class="rating-label">Good</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">4</div>
                             <span class="rating-label">Very Good</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">5</div>
                             <span class="rating-label">Excellent</span>
                         </div>
@@ -805,23 +822,23 @@
                 <div class="survey-question">
                     <h4>2. How valuable was the networking opportunity?</h4>
                     <div class="rating-scale">
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">1</div>
                             <span class="rating-label">Poor</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">2</div>
                             <span class="rating-label">Fair</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">3</div>
                             <span class="rating-label">Good</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">4</div>
                             <span class="rating-label">Very Good</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">5</div>
                             <span class="rating-label">Excellent</span>
                         </div>
@@ -831,23 +848,23 @@
                 <div class="survey-question">
                     <h4>3. How likely are you to attend a future SIM Chicago event?</h4>
                     <div class="rating-scale">
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">1</div>
                             <span class="rating-label">Not Likely</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">2</div>
                             <span class="rating-label">Somewhat</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">3</div>
                             <span class="rating-label">Likely</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">4</div>
                             <span class="rating-label">Very Likely</span>
                         </div>
-                        <div class="rating-item">
+                        <div class="rating-item" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog', '_blank')">
                             <div class="rating-circle">5</div>
                             <span class="rating-label">Definitely</span>
                         </div>
@@ -855,18 +872,18 @@
                 </div>
 
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="mailto:info@sim-chicago.org?subject=SIM%20Chicago%20Event%20Feedback&body=Thank%20you%20for%20providing%20feedback%20on%20the%20SIM%20Chicago%20Executive%20Women%20in%20Tech%20event.%0A%0APlease%20rate%20the%20following%20%281-5%20scale%2C%20where%201%20%3D%20Poor%20and%205%20%3D%20Excellent%29%3A%0A%0A1.%20Overall%20event%20experience%3A%20___%0A%0A2.%20Networking%20opportunity%20value%3A%20___%0A%0A3.%20Likelihood%20to%20attend%20future%20SIM%20Chicago%20events%3A%20___%0A%0AAdditional%20comments%3A%0A%0A" class="btn btn-primary">Submit Feedback</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWDkTprrQY-YOcP9qOW-zUtMNIy66p8fOIlPIJiMiXDmdmgg/viewform?usp=dialog" target="_blank" class="btn btn-primary">Submit Feedback</a>
                 </div>
             </div>
-        </div>
-        <div class="page-arrows">
-            <button onclick="showPage('sponsors')">← Sponsors</button>
-            <button onclick="showPage('connect')">Next → Connect</button>
         </div>
     </div>
 
     <!-- PAGE 5: CONNECT -->
     <div class="page" id="page-connect">
+        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
+            <button onclick="showPage('survey')">← Survey</button>
+            <button onclick="showPage('sim')">Next → About SIM</button>
+        </div>
         <div class="box">
             <div class="box-header">
                 <h2>Connect With Us</h2>
@@ -902,18 +919,18 @@
                     <div class="icon">📱</div>
                     <h4>Social Media</h4>
                     <p>Join the conversation and share your experience</p>
-                    <a href="https://www.sim-chicago.org/events/event_list.asp">@SIMChicago</a>
+                    <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=267954290242778&kid_directed_site=0&app_id=267954290242778&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D267954290242778%26redirect_uri%3Dhttps%253A%252F%252Fws.yourmembership.com%252FAms%252FSocialOAuth%252Ffacebook%26scope%3Demail%252Cpublic_profile%252Cuser_friends%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D26923fac-b48a-46d4-9bfd-d6cd93dd0b9f%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fws.yourmembership.com%2FAms%2FSocialOAuth%2Ffacebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page&locale=en_US&pl_dbl=0&is_business_login=0">Facebook</a>
                 </div>
             </div>
-        </div>
-        <div class="page-arrows">
-            <button onclick="showPage('survey')">← Survey</button>
-            <button onclick="showPage('sim')">Next → About SIM</button>
         </div>
     </div>
 
     <!-- PAGE 6: ABOUT SIM -->
     <div class="page" id="page-sim">
+        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
+            <button onclick="showPage('connect')">← Connect</button>
+            <button onclick="showPage('gallery')">Next → Photo Gallery</button>
+        </div>
         <div class="box">
             <div class="box-header">
                 <h2>About SIM Chicago</h2>
@@ -940,9 +957,34 @@
                 </div>
             </div>
         </div>
-        <div class="page-arrows">
-            <button onclick="showPage('connect')">← Connect</button>
+    </div>
+
+    <!-- PAGE 7: PHOTO GALLERY -->
+    <div class="page" id="page-gallery">
+        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
+            <button onclick="showPage('sim')">← About SIM</button>
             <button onclick="showPage('home')">Home →</button>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <h2>Event Photo Gallery</h2>
+                <div class="divider"></div>
+                <p>Capturing moments from our Executive Women in Tech event</p>
+            </div>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
+                    <img src="picture1.png" alt="Event Photo 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
+                    <img src="picture2.png" alt="Event Photo 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
+                    <img src="picture3.png" alt="Event Photo 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--gray); margin-top: 2rem; font-size: 0.9rem;">
+                Photos from the Executive Women in Tech event
+            </p>
         </div>
     </div>
 
