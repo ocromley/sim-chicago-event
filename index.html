@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIM Chicago - Executive Women in Tech | Featuring Lisa Davis</title>
+    <title>SIM Chicago - Executive Women in Tech | Board Readiness Panel</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -204,6 +204,7 @@
             padding: 1rem 2rem;
             border-radius: 12px;
             border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 1rem;
         }
         .hero-date .date-icon {
             width: 50px;
@@ -222,6 +223,37 @@
             font-size: 1.1rem;
         }
         .hero-date .date-text span {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        .hero-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-top: 0.5rem;
+        }
+        .hero-location .loc-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .hero-location .loc-text { text-align: left; }
+        .hero-location .loc-text strong {
+            display: block;
+            color: var(--white);
+            font-size: 1.1rem;
+        }
+        .hero-location .loc-text span {
             color: rgba(255,255,255,0.7);
             font-size: 0.9rem;
         }
@@ -269,52 +301,6 @@
             color: var(--gray);
             margin-bottom: 1rem;
             line-height: 1.8;
-        }
-        .book-highlight {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-            color: var(--white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-top: 1.5rem;
-            border-left: 4px solid var(--gold);
-        }
-        .book-highlight strong {
-            color: var(--gold);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        .book-cover-placeholder {
-            width: 100%;
-            max-width: 280px;
-            height: 420px;
-            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 1.5rem auto;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-            border: 2px solid var(--gold);
-            text-align: center;
-            padding: 2rem;
-        }
-        .book-cover-placeholder .book-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: var(--gold);
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-        .book-cover-placeholder .book-author {
-            color: rgba(255,255,255,0.8);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        .book-cover-placeholder .book-subtitle {
-            color: rgba(255,255,255,0.6);
-            font-size: 0.8rem;
-            font-style: italic;
         }
         .sponsors-grid {
             display: flex;
@@ -591,6 +577,118 @@
             border-color: var(--gold);
             color: var(--navy);
         }
+        .panelist-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--light-gray);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .panelist-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--gold);
+        }
+        .panelist-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+        .panelist-card .panelist-role {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        .panelist-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        .moderator-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        .topics-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .topics-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--light-gray);
+            transition: all 0.3s ease;
+        }
+        .topics-list li:hover {
+            background: rgba(201,168,76,0.05);
+            border-radius: 8px;
+        }
+        .topics-list li:last-child { border-bottom: none; }
+        .topics-list li::before {
+            content: '•';
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        .topics-list li span {
+            color: var(--navy);
+            font-weight: 500;
+        }
+        .registration-box {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            max-width: 700px;
+            margin: 2rem auto 0;
+            text-align: center;
+        }
+        .registration-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        .registration-box .price-row {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        .registration-box .price-item {
+            text-align: center;
+        }
+        .registration-box .price-item strong {
+            display: block;
+            font-size: 1.3rem;
+            color: var(--gold);
+        }
+        .registration-box .price-item span {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        .registration-box .note {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
         @media (max-width: 768px) {
             .speaker-grid { grid-template-columns: 1fr; }
             .page-nav { display: none; }
@@ -599,12 +697,10 @@
             .sponsors-grid { gap: 2rem; }
             .rating-scale { justify-content: center; }
             .connect-grid { grid-template-columns: 1fr; }
+            .registration-box .price-row { gap: 1.5rem; }
         }
     </style>
     <base target="_blank">
-<base target="_blank">
-<base target="_blank">
-<base target="_blank">
 <base target="_blank">
 </head>
 <body>
@@ -619,35 +715,42 @@
         </div>
         <nav class="page-nav">
             <button onclick="showPage('home')" class="active" id="btn-home">Home</button>
-            <button onclick="showPage('speaker')" id="btn-speaker">Speaker</button>
+            <button onclick="showPage('panel')" id="btn-panel">Panel</button>
+            <button onclick="showPage('topics')" id="btn-topics">Topics</button>
             <button onclick="showPage('sponsors')" id="btn-sponsors">Sponsors</button>
             <button onclick="showPage('survey')" id="btn-survey">Survey</button>
             <button onclick="showPage('connect')" id="btn-connect">Connect</button>
             <button onclick="showPage('sim')" id="btn-sim">About SIM</button>
-            <button onclick="showPage('gallery')" id="btn-gallery">Photo Gallery</button>
         </nav>
     </header>
 
     <!-- PAGE 1: HOME / HERO -->
     <div class="page active" id="page-home">
         <div class="page-arrows" style="padding: 1rem 2rem; justify-content: flex-end; background: transparent; position: absolute; top: 80px; right: 0; z-index: 100;">
-            <button onclick="showPage('speaker')">Next → Speaker</button>
+            <button onclick="showPage('panel')">Next → Panel</button>
         </div>
         <div class="hero-box">
             <div class="hero-content">
                 <div class="hero-badge">Invitation Only</div>
                 <h1>
-                    Thank You for Joining Us!
-                    <span>An Evening of Connection, Leadership & Inspiration</span>
+                    Board Readiness Panel
+                    <span>An Evening of Connection, Leadership &amp; Insight</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Featuring Lisa Davis, Fortune 500 Executive & Bestselling Author
+                    Join us for an intimate conversation with accomplished industry and executive search leaders on navigating the path to the boardroom
                 </p>
                 <div class="hero-date">
                     <div class="date-icon">📅</div>
                     <div class="date-text">
-                        <strong>Monday, June 1, 2026</strong>
+                        <strong>Tuesday, October 6, 2026</strong>
                         <span>5:30 PM – 8:30 PM</span>
+                    </div>
+                </div>
+                <div class="hero-location">
+                    <div class="loc-icon">📍</div>
+                    <div class="loc-text">
+                        <strong>Yash Technologies</strong>
+                        <span>333 N. Michigan Ave, Floor 4, Chicago, IL</span>
                     </div>
                 </div>
             </div>
@@ -662,8 +765,8 @@
                 <li>
                     <div class="itinerary-time">5:30 PM</div>
                     <div class="itinerary-content">
-                        <h4>Welcome & Networking</h4>
-                        <p>Arrive, check in, and connect with fellow attendees over refreshments</p>
+                        <h4>Welcome &amp; Hosted Reception</h4>
+                        <p>Arrive, check in, and connect with fellow attendees over drinks and hors d'oeuvres</p>
                     </div>
                 </li>
                 <li>
@@ -676,98 +779,130 @@
                 <li>
                     <div class="itinerary-time">6:30 PM</div>
                     <div class="itinerary-content">
-                        <h4>Keynote: Lisa Davis</h4>
-                        <p>"The Only Woman in the Room" – Lessons on leadership, perseverance, and winning in workplaces built for men</p>
+                        <h4>Board Readiness Panel Discussion</h4>
+                        <p>Moderated conversation with accomplished board leaders and executive search experts</p>
                     </div>
                 </li>
                 <li>
                     <div class="itinerary-time">7:30 PM</div>
                     <div class="itinerary-content">
-                        <h4>Q&A and Discussion</h4>
-                        <p>Interactive session with Lisa Davis and peer networking</p>
+                        <h4>Audience Q&amp;A</h4>
+                        <p>Interactive session with the panelists and peer networking</p>
                     </div>
                 </li>
                 <li>
                     <div class="itinerary-time">8:00 PM</div>
                     <div class="itinerary-content">
-                        <h4>Book Signing and Building Community & Connections</h4>
-                        <p>Final thoughts and opportunity to connect with speakers and attendees</p>
+                        <h4>Executive Networking</h4>
+                        <p>Dedicated time for building connections with fellow technology leaders</p>
                     </div>
                 </li>
             </ul>
+
+            <div class="registration-box">
+                <h3>Registration</h3>
+                <div class="price-row">
+                    <div class="price-item">
+                        <strong>Complimentary</strong>
+                        <span>SIM Members</span>
+                    </div>
+                    <div class="price-item">
+                        <strong>$60</strong>
+                        <span>Non-Members</span>
+                    </div>
+                </div>
+                <p class="note">This invitation-only gathering is intended for senior women CIOs, their direct reports, and other senior women technology leaders. This invitation is non-transferable. Due to limited capacity, cancellations or no-shows cannot be accommodated.</p>
+            </div>
         </div>
     </div>
 
-    <!-- PAGE 2: SPEAKER -->
-    <div class="page" id="page-speaker">
+    <!-- PAGE 2: PANEL -->
+    <div class="page" id="page-panel">
         <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
             <button onclick="showPage('home')">← Home</button>
+            <button onclick="showPage('topics')">Next → Topics</button>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <h2>Featured Panelists</h2>
+                <div class="divider"></div>
+                <p>Accomplished industry and executive search leaders sharing practical perspectives on navigating the path to the boardroom</p>
+            </div>
+
+            <div class="panelist-card">
+                <h4>Art Hopkins</h4>
+                <span class="panelist-role">Global Head of NextGen Tech Officers Practice, Russell Reynolds Associates</span>
+                <p>Art Hopkins brings deep expertise in executive search and leadership advisory, specializing in technology officer placements and board readiness for senior technology leaders across global enterprises.</p>
+            </div>
+
+            <div class="panelist-card">
+                <h4>Dorri McWhorter</h4>
+                <span class="panelist-role">President &amp; CEO, The Executives' Club of Chicago</span>
+                <p>Dorri McWhorter is a recognized leader in executive development and corporate governance, bringing extensive experience in building leadership pipelines and fostering executive excellence in the Chicago business community.</p>
+            </div>
+
+            <div class="panelist-card">
+                <h4>Sylvia Prickel</h4>
+                <span class="panelist-role">Chicago Chapter Executive Committee Chair, Sponsor Co-Chair &amp; Previous Board Chair, Private Directors Association</span>
+                <p>Sylvia Prickel offers firsthand perspective on board service and private directorship, with a track record of guiding organizations through governance challenges and building effective board cultures.</p>
+            </div>
+
+            <div class="panelist-card" style="border: 2px solid var(--gold);">
+                <span class="moderator-badge">Moderator</span>
+                <h4>Ann Madea</h4>
+                <span class="panelist-role">Retired EVP &amp; Chief Information Officer, Simmons Bank</span>
+                <p>Ann Madea brings decades of experience as a senior technology executive who has worked closely with corporate boards. Her perspective bridges the gap between technology leadership and governance, making her the ideal moderator for this important conversation.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: TOPICS -->
+    <div class="page" id="page-topics">
+        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
+            <button onclick="showPage('panel')">← Panel</button>
             <button onclick="showPage('sponsors')">Next → Sponsors</button>
         </div>
         <div class="box">
             <div class="box-header">
-                <h2>Featured Speaker</h2>
+                <h2>Discussion Topics</h2>
                 <div class="divider"></div>
-            </div>
-            <div class="speaker-grid">
-                <div class="speaker-image">
-                    <img src="lisa-davis.jpg" alt="Lisa Davis">
-                </div>
-                <div class="speaker-info">
-                    <h3>Lisa Davis</h3>
-                    <span class="title">Fortune 500 Executive & Bestselling Author</span>
-                    <p>Lisa Davis is a visionary force in digital transformation and leadership in the AI era, with over 25 years of experience driving innovation across government, academia, high tech, and healthcare.</p>
-
-                    <p>A former Fortune 100 tech executive who has led large-scale modernization efforts across global enterprises, she has built a career turning technology into tangible business growth while redefining inclusive leadership, not as a cultural play, but as a competitive advantage that accelerates growth and fuels business success.</p>
-
-                    <p>Now, in her next chapter, Lisa is focused on shaping the next generation of leaders in the age of AI. She brings a uniquely holistic approach to transformation, understanding that progress isn't just powered by technology, it's enabled by people, culture, and process.</p>
-
-                    <p>As an advisor, board member, and author of #1 Amazon bestselling book <strong style="color: var(--navy);">The Only Woman in the Room</strong>, she is a fierce advocate for elevating women and diverse talent in STEM and for rebuilding the systems that have kept them out.</p>
-
-                    <p>In sharing her own experiences and working alongside leaders and organizations ready to meet the moment, Lisa is helping to shape a future where equity and excellence power one another. She's not celebrating having been the only woman in the room, she's building a future where no one else has to be. <strong style="color: var(--navy);">The Only Woman in the Room: How to Win in a Workplace (Still!) Built for Men</strong> now available on <a href="https://www.amazon.com/Only-Woman-Room-Workplace-Built/dp/B0DKLHHMZ4" target="_blank" style="color: #40E0D0; text-decoration: underline; font-weight: 600;">Amazon</a>.</p>
-
-                    <p>Her journey from early career challenges to executive leadership provides invaluable insights for women navigating the tech industry. Lisa's authentic storytelling and practical wisdom make her one of the most sought-after speakers on leadership and diversity in technology.</p>
-
-                    <div class="book-highlight" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 2.5rem; border-radius: 12px; margin-top: 1.5rem; border-left: 4px solid var(--gold); line-height: 1.8;">
-                        <strong style="color: var(--gold); font-size: 1.2rem; display: block; margin-bottom: 1.5rem;">Bestselling Book</strong>
-                        <p style="color: #f0f0f0; font-size: 1.05rem; margin-bottom: 1.2rem;">Lisa is the author of <strong style="color: #ffffff;">The Only Woman in the Room: How to Thrive in Workplaces Built for Men</strong>It is a candid, empowering guide that draws from her personal experiences to help women succeed in male-dominated industries. The book has become essential reading for women in tech and business leadership.</p>
-                        <p style="color: #f0f0f0; font-size: 1.05rem; margin-bottom: 1.2rem;">It invites readers into the real story of what it takes to lead as a woman when the rules weren't written with you in mind, but you're determined to win anyway.</p>
-                        <p style="color: #f0f0f0; font-size: 1.05rem; margin-bottom: 1.2rem;">She's not celebrating having been the only woman in the room, she's building a future where no one else has to be.</p>
-                        <p style="color: #f0f0f0; font-size: 1.05rem; margin-bottom: 0;"><a href="https://www.daviscoreadvisory.com/about" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">More about Lisa...</a></p>
-                    </div>
-                </div>
+                <p>Practical perspectives on navigating the path to the boardroom and contributing effectively once you are there</p>
             </div>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <h3 style="font-family: Playfair Display, serif; margin-bottom: 1rem;">Featured Book</h3>
-                <img src="1775853646404.jpg" alt="The Only Woman in the Room Book Cover" style="width: 100%; max-width: 600px; height: auto; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.2); margin: 1.5rem auto; display: block;">
-                <p style="color: var(--gray); max-width: 500px; margin: 0 auto; line-height: 1.8;">
-                    Lisa's bestselling book offers candid advice and powerful strategies for women navigating male-dominated workplaces. Drawing from her own experiences in Fortune 500 companies, she provides practical guidance for building confidence, claiming your seat at the table, and thriving as a woman in leadership.
+            <ul class="topics-list">
+                <li><span>What boards look for in prospective directors</span></li>
+                <li><span>Positioning yourself for future board opportunities</span></li>
+                <li><span>How the board recruitment and selection process actually works</span></li>
+                <li><span>Building the experience, network, and visibility that make you board-ready</span></li>
+                <li><span>Developing effective relationships with your own company's board</span></li>
+                <li><span>The value technology executives bring to corporate governance</span></li>
+                <li><span>Lessons learned and practical advice from experienced board leaders</span></li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: rgba(201,168,76,0.05); border-radius: 12px;">
+                <p style="color: var(--navy); font-size: 1.1rem; font-style: italic; max-width: 700px; margin: 0 auto;">
+                    "Whether you are regularly engaging with your organization's board today, actively pursuing board service, or preparing for opportunities later in your career, this discussion will offer practical insight and valuable executive perspective."
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- PAGE 3: SPONSORS -->
+    <!-- PAGE 4: SPONSORS -->
     <div class="page" id="page-sponsors">
         <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
-            <button onclick="showPage('speaker')">← Speaker</button>
+            <button onclick="showPage('topics')">← Topics</button>
             <button onclick="showPage('survey')">Next → Survey</button>
         </div>
         <div class="box">
             <div class="box-header">
                 <h2>Our Sponsors</h2>
                 <div class="divider"></div>
-                <p>We extend our sincere gratitude to the organizations that make this event possible</p>
+                <p>This event is made possible through the support of our sponsors</p>
             </div>
             <div class="sponsors-grid">
                 <div class="sponsor-item">
-                    <img src="eclipse.png" alt="Eclipse" class="sponsor-logo" style="max-height: 50px;">
-                    <span class="sponsor-name">Eclipse</span>
-                </div>
-                <div class="sponsor-item">
-                    <img src="lenovo.png" alt="Lenovo" class="sponsor-logo" style="max-height: 50px;">
-                    <span class="sponsor-name">Lenovo</span>
+                    <img src="sponsor-placeholder.png" alt="Sponsor" class="sponsor-logo" style="max-height: 50px;">
+                    <span class="sponsor-name">Sponsor Name</span>
                 </div>
             </div>
 
@@ -780,7 +915,8 @@
             </div>
         </div>
     </div>
-    <!-- PAGE 4: SURVEY -->
+
+    <!-- PAGE 5: SURVEY -->
     <div class="page" id="page-survey">
         <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
             <button onclick="showPage('sponsors')">← Sponsors</button>
@@ -879,7 +1015,7 @@
         </div>
     </div>
 
-    <!-- PAGE 5: CONNECT -->
+    <!-- PAGE 6: CONNECT -->
     <div class="page" id="page-connect">
         <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
             <button onclick="showPage('survey')">← Survey</button>
@@ -890,11 +1026,6 @@
                 <h2>Connect With Us</h2>
                 <div class="divider"></div>
                 <p>Stay connected with SIM Chicago and join our growing community of technology leaders</p>
-            </div>
-
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <img src="chicago-summit.jpg" alt="SIM Chicago Summit Event" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
-                <p style="color: var(--gray); margin-top: 1rem; font-size: 0.9rem;">Share your photos from tonight's event! Tag us on social media</p>
             </div>
 
             <div class="connect-grid">
@@ -926,11 +1057,11 @@
         </div>
     </div>
 
-    <!-- PAGE 6: ABOUT SIM -->
+    <!-- PAGE 7: ABOUT SIM -->
     <div class="page" id="page-sim">
         <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
             <button onclick="showPage('connect')">← Connect</button>
-            <button onclick="showPage('gallery')">Next → Photo Gallery</button>
+            <button onclick="showPage('home')">Home →</button>
         </div>
         <div class="box">
             <div class="box-header">
@@ -957,53 +1088,6 @@
                     <a href="https://www.sim-chicago.org/events/event_list.asp" class="btn btn-white">Visit SIM Chicago Website</a>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- PAGE 7: PHOTO GALLERY -->
-    <div class="page" id="page-gallery">
-        <div class="page-arrows" style="padding: 1rem 2rem; justify-content: space-between; background: var(--cream);">
-            <button onclick="showPage('sim')">← About SIM</button>
-            <button onclick="showPage('home')">Home →</button>
-        </div>
-        <div class="box">
-            <div class="box-header">
-                <h2>Event Photo Gallery</h2>
-                <div class="divider"></div>
-                <p>Capturing moments from our Executive Women in Tech event</p>
-            </div>
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture2.png" alt="Event Photo 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture3.png" alt="Event Photo 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture4.jpeg" alt="Event Photo 4" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture5.jpeg" alt="Event Photo 5" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture8.jpg" alt="Event Photo 8" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture9.jpeg" alt="Event Photo 9" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture11.jpeg" alt="Event Photo 11" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture12.jpg" alt="Event Photo 12" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item" style="background: var(--light-gray); border-radius: 12px; overflow: hidden; height: 280px;">
-                    <img src="picture13.jpg" alt="Event Photo 13" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-            </div>
-            <p style="text-align: center; color: var(--gray); margin-top: 2rem; font-size: 0.9rem;">
-                Photos from the Executive Women in Tech event
-            </p>
         </div>
     </div>
 
